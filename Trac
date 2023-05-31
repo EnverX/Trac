@@ -1,8 +1,3 @@
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
 local Trac = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local Frame_2 = Instance.new("Frame")
@@ -18,8 +13,6 @@ local UICorner_2 = Instance.new("UICorner")
 local FrameSilent = Instance.new("Frame")
 local TRACSILENT = Instance.new("TextButton")
 local UICorner_3 = Instance.new("UICorner")
-
---Properties:
 
 Trac.Name = "Trac"
 Trac.Parent = game.CoreGui
@@ -255,8 +248,6 @@ end)
 
 UICorner_3.CornerRadius = UDim.new(0, 2)
 UICorner_3.Parent = TRACSILENT
-
--- Scripts:
 
 local function NSUIFQG_fake_script() -- TextButton.TrueLock 
 	local script = Instance.new('Script', TextButton)
