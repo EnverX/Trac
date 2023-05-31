@@ -1,0 +1,327 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Trac = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Frame_2 = Instance.new("Frame")
+local UIGradient = Instance.new("UIGradient")
+local TextButton = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local TextButton_2 = Instance.new("TextButton")
+local ImageLabel = Instance.new("ImageLabel")
+local FrameLock = Instance.new("Frame")
+local TRACLOCK = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local FrameSilent = Instance.new("Frame")
+local TRACSILENT = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+
+--Properties:
+
+Trac.Name = "Trac"
+Trac.Parent = game.CoreGui
+Trac.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = Trac
+Frame.BackgroundColor3 = Color3.fromRGB(33, 49, 35)
+Frame.Position = UDim2.new(0.300653607, 0, 0.0751155242, 0)
+Frame.Size = UDim2.new(0, 426, 0, 542)
+
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(0, 0, 0.0479704812, 0)
+Frame_2.Size = UDim2.new(0, 426, 0, 2)
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(33, 49, 35)), ColorSequenceKeypoint.new(0.16, Color3.fromRGB(9, 170, 95)), ColorSequenceKeypoint.new(0.48, Color3.fromRGB(51, 255, 75)), ColorSequenceKeypoint.new(0.84, Color3.fromRGB(9, 170, 95)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(33, 49, 35))}
+UIGradient.Parent = Frame_2
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(35, 176, 0)
+TextButton.BackgroundTransparency = 1.000
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.0586854443, 0, 0.00369003695, 0)
+TextButton.Size = UDim2.new(0, 64, 0, 25)
+TextButton.Font = Enum.Font.GothamBold
+TextButton.Text = "LOCK"
+TextButton.TextColor3 = Color3.fromRGB(150, 255, 143)
+TextButton.TextSize = 17.000
+TextButton.TextWrapped = true
+
+UICorner.CornerRadius = UDim.new(0, 7)
+UICorner.Parent = Frame
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.64084506, 0, 0.00369003695, 0)
+TextLabel.Size = UDim2.new(0, 153, 0, 25)
+TextLabel.Font = Enum.Font.GothamBold
+TextLabel.Text = "DISCORD.GG/TRAC.GG"
+TextLabel.TextColor3 = Color3.fromRGB(150, 255, 143)
+TextLabel.TextSize = 13.000
+
+TextButton_2.Parent = Frame
+TextButton_2.BackgroundColor3 = Color3.fromRGB(35, 176, 0)
+TextButton_2.BackgroundTransparency = 1.000
+TextButton_2.BorderSizePixel = 0
+TextButton_2.Position = UDim2.new(0.21361503, 0, 0.00369003695, 0)
+TextButton_2.Size = UDim2.new(0, 64, 0, 25)
+TextButton_2.Font = Enum.Font.GothamBold
+TextButton_2.Text = "SILENT"
+TextButton_2.TextColor3 = Color3.fromRGB(150, 255, 143)
+TextButton_2.TextSize = 17.000
+TextButton_2.TextWrapped = true
+
+ImageLabel.Parent = Frame
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.Position = UDim2.new(0.00400000019, 0, 0.00400000019, 0)
+ImageLabel.Size = UDim2.new(0, 25, 0, 25)
+ImageLabel.Image = "rbxassetid://13609876574"
+
+FrameLock.Name = "FrameLock"
+FrameLock.Parent = Frame
+FrameLock.BackgroundColor3 = Color3.fromRGB(33, 49, 35)
+FrameLock.BorderColor3 = Color3.fromRGB(55, 255, 0)
+FrameLock.BorderSizePixel = 0
+FrameLock.Position = UDim2.new(0.018779343, 0, 0.0719557181, 0)
+FrameLock.Size = UDim2.new(0, 410, 0, 494)
+
+TRACLOCK.Name = "[TRAC] LOCK"
+TRACLOCK.Parent = FrameLock
+TRACLOCK.BackgroundColor3 = Color3.fromRGB(35, 176, 0)
+TRACLOCK.BackgroundTransparency = 0.700
+TRACLOCK.Position = UDim2.new(0.028756097, 0, 0.0202429146, 0)
+TRACLOCK.Size = UDim2.new(0, 386, 0, 28)
+TRACLOCK.Font = Enum.Font.GothamBold
+TRACLOCK.Text = "[TRAC] LOCK"
+TRACLOCK.TextColor3 = Color3.fromRGB(150, 255, 143)
+TRACLOCK.TextSize = 15.000
+TRACLOCK.MouseButton1Down:Connect(function()
+	getgenv().Settings = {
+		Main = {
+			Enable = true,
+
+			HoldKey = false,
+			ToggleKey = true,
+
+			UseKeyBoardKey = true,
+			KeyBoardKey = Enum.KeyCode.E,
+
+			UseMouseKey = false,
+			ThirdPerson = true,
+			FirstPerson = true,
+
+			AutoPingSets = false,
+
+			UseCircleRadius = false,
+			DisableOutSideCircle = false,
+
+			UseShake = true,
+			ShakePower = 1,
+
+			CheckForWalls = true
+		},
+		Check = {
+			CheckIfKo = false,
+			DisableOnTargetDeath = false,
+			DisableOnPlayerDeath = false
+		},
+		Horizontal = {
+			PredictMovement = true,
+			PredictionVelocity = 0.123
+		},
+		Smooth = {
+			Smoothness = true,
+			SmoothnessAmount = 0.175,
+			SmoothMethod = Enum.EasingStyle.Circular,
+			SmoothMethodV2 = Enum.EasingDirection.InOut
+		},
+		Part = {
+			AimPart = "Head",
+			CheckIfJumpedAimPart = "HumanoidRootPart",
+			CheckIfJumped = true,
+			GetClosestPart = false
+		},
+		Visual = {
+			Fov = false,
+			FovTransparency = 1,
+			FovThickness = 1,
+			FovColor = Color3.fromRGB(255, 185, 0),
+			FovRadius = 60
+		},
+		Spoofer = {
+			MemorySpoofer = true,
+			MemoryTabColor = Color3.fromRGB(211, 88, 33),
+			MemoryMost = 85000,
+			MemoryLeast = 80000,
+
+			PingSpoofer = true,
+			PingTabColor = Color3.fromRGB(211, 88, 33),
+			PingMost = 2000,
+			PingLeast = 1000
+		}
+	}
+
+	loadstring(game:HttpGet('https://pastebin.com/raw/YU0pbPWn'))()
+end)
+
+UICorner_2.CornerRadius = UDim.new(0, 2)
+UICorner_2.Parent = TRACLOCK
+
+FrameSilent.Name = "FrameSilent"
+FrameSilent.Parent = Frame
+FrameSilent.BackgroundColor3 = Color3.fromRGB(33, 49, 35)
+FrameSilent.Position = UDim2.new(0.018779343, 0, 0.0719557181, 0)
+FrameSilent.Size = UDim2.new(0, 410, 0, 494)
+FrameSilent.Visible = false
+
+TRACSILENT.Name = "[TRAC] SILENT"
+TRACSILENT.Parent = FrameSilent
+TRACSILENT.BackgroundColor3 = Color3.fromRGB(35, 176, 0)
+TRACSILENT.BackgroundTransparency = 0.700
+TRACSILENT.Position = UDim2.new(0.028756097, 0, 0.0202429146, 0)
+TRACSILENT.Size = UDim2.new(0, 386, 0, 28)
+TRACSILENT.Font = Enum.Font.GothamBold
+TRACSILENT.Text = "[TRAC] SILENT"
+TRACSILENT.TextColor3 = Color3.fromRGB(150, 255, 143)
+TRACSILENT.TextSize = 15.000
+TRACLOCK.MouseButton1Down:Connect(function()
+	local Aiming = loadstring(game:HttpGet("https://pastebin.com/raw/XgqgAC8D"))()
+	Aiming.TeamCheck(false)
+
+	local Workspace = game:GetService("Workspace")
+	local Players = game:GetService("Players")
+	local RunService = game:GetService("RunService")
+	local UserInputService = game:GetService("UserInputService")
+
+	local LocalPlayer = Players.LocalPlayer
+	local Mouse = LocalPlayer:GetMouse()
+	local CurrentCamera = Workspace.CurrentCamera
+
+	local DaHoodSettings = {
+		SilentAim = true,
+		Prediction = 0.157,
+
+	}
+	getgenv().DaHoodSettings = DaHoodSettings
+
+	function Aiming.Check()
+		if not (Aiming.Enabled == true and Aiming.Selected ~= LocalPlayer and Aiming.SelectedPart ~= nil) then
+			return false
+		end
+
+		local Character = Aiming.Character(Aiming.Selected)
+		local KOd = Character:WaitForChild("BodyEffects")["K.O"].Value
+		local Grabbed = Character:FindFirstChild("GRABBING_CONSTRAINT") ~= nil
+
+		if (KOd or Grabbed) then
+			return false
+		end
+
+		return true
+	end
+
+	local __index
+	__index = hookmetamethod(game, "__index", function(t, k)
+		if (t:IsA("Mouse") and (k == "Hit" or k == "Target") and Aiming.Check()) then
+			local SelectedPart = Aiming.SelectedPart
+
+			if (DaHoodSettings.SilentAim and (k == "Hit" or k == "Target")) then
+				local Hit = SelectedPart.CFrame + (SelectedPart.Velocity * DaHoodSettings.Prediction)
+
+				return (k == "Hit" and Hit or SelectedPart)
+			end
+		end
+
+		return __index(t, k)
+	end)
+
+	RunService:BindToRenderStep("AimLock", 0, function()
+		if (DaHoodSettings.AimLock and Aiming.Check() and UserInputService:IsKeyDown(DaHoodSettings.AimLockKeybind)) then
+			local SelectedPart = Aiming.SelectedPart
+
+			local Hit = SelectedPart.CFrame + (SelectedPart.Velocity * DaHoodSettings.Prediction)
+
+			CurrentCamera.CFrame = CFrame.lookAt(CurrentCamera.CFrame.Position, Hit.Position)
+		end
+	end)
+end)
+
+UICorner_3.CornerRadius = UDim.new(0, 2)
+UICorner_3.Parent = TRACSILENT
+
+-- Scripts:
+
+local function NSUIFQG_fake_script() -- TextButton.TrueLock 
+	local script = Instance.new('Script', TextButton)
+
+	script.Parent.MouseButton1Click:Connect (function()
+		script.Parent.Parent.FrameLock.Visible =true
+	end)
+end
+coroutine.wrap(NSUIFQG_fake_script)()
+local function WEKCDHV_fake_script() -- TextButton.FalseSilent 
+	local script = Instance.new('Script', TextButton)
+
+	script.Parent.MouseButton1Click:Connect (function()
+		script.Parent.Parent.FrameSilent.Visible =false
+	end)
+end
+coroutine.wrap(WEKCDHV_fake_script)()
+local function JXXZKDQ_fake_script() -- TextButton_2.TrueSilent 
+	local script = Instance.new('Script', TextButton_2)
+
+	script.Parent.MouseButton1Click:Connect (function()
+		script.Parent.Parent.FrameSilent.Visible =true
+	end)
+end
+coroutine.wrap(JXXZKDQ_fake_script)()
+local function FVCECX_fake_script() -- TextButton_2.FalseLock 
+	local script = Instance.new('Script', TextButton_2)
+
+	script.Parent.MouseButton1Click:Connect (function()
+		script.Parent.Parent.FrameLock.Visible =false
+	end)
+end
+coroutine.wrap(FVCECX_fake_script)()
+local function MCICPHN_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	local frame = script.Parent.Parent.Frame
+	local tecla = Enum.KeyCode.RightControl
+	
+	local UIS = game:GetService("UserInputService")
+	local abrir = false
+	
+	UIS.InputBegan:Connect(function(key)
+		if key.KeyCode == tecla then
+			if UIS:GetFocusedTextBox() == nil then
+				if abrir == false then
+					abrir = true
+					frame.Visible = abrir
+				elseif abrir == true then
+					abrir = false
+					frame.Visible = abrir
+				end
+			end
+		end
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+	
+		if abrir == false then
+			abrir = true
+			frame.Visible = abrir
+		elseif abrir == true then
+			abrir = false
+			frame.Visible = abrir
+		end
+	end)
+end
+coroutine.wrap(MCICPHN_fake_script)()
